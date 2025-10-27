@@ -5,6 +5,7 @@
 - Fix permission trouble with .chglog
 
 ### Features
+- Add multiple target's from a file.
 - Add /wordlists with all the biggest and best directory and subdomain files
 
 
