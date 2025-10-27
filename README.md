@@ -26,6 +26,8 @@ PyBuster is a lightweight, opinionated directory buster written in Python for au
 
 - Subs-only mode to only try directory paths like /admin, /login etc.
 
+- Scan many different domains in one with `-mT`
+
 ---
 
 ## Quick install
@@ -49,25 +51,27 @@ python3 PyBuster.py -f path/to/wordlist.txt website.com
 ### Searching for path's with the extensions .php, .html and outputting the answer as JSON data
 
 ```bash
-python3 PyBuster.py -f path/to/wordlist.txt --ext .php,.html 
+python3 PyBuster.py -f path/to/wordlist.txt -x .php,.html 
 --output-format json -o results.json example.com
 ```
 > This returns all php and html files in JSON format to a file called ***results.json***
 
 ---
 
-## Supported flags (short)
+## Supported flags
 
 - **-f, --file** - path to wordlist (required)
 
 - **-o, --output** - output file (default: directories.txt)
 
-- **--ext** - comma separated extensions (e.g. .php,.html)
+- **-x, --ext** - comma separated extensions (e.g. php, html)
 
-- **-s, --subs-only**- only try directory paths (no extensions)
+- **-d, --dirs-only**- only try directory paths (no extensions)
 
-- **--resume** - skip URLs already present in output
+- **-r, --resume** - skip URLs already present in output
 
-- **--append** - append to output file instead of overwrite
+- **-a, --append** - append to output file instead of overwrite
 
-- **--output-format** - raw|json|csv
+- **-oF, --output-format** - raw / json / csv
+
+- **mT, --multiple-targets** - file with multiple domains (one per line)

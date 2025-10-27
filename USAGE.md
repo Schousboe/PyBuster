@@ -23,28 +23,38 @@ python3 PyBuster.py -f path/to/wordlist.txt -o path/to/output.txt example.com
 ```bash
 python3 PyBuster.py -f wordlists/common.txt example.com
 ```
+> This will return a list of sub-domain's and directories to the default ***directories.txt***
 
 ### 2) Subdirectories only (no extensions)
 
 ```bash
-python3 PyBuster.py -f wordlists/common.txt -s -o subs.txt example.com
+python3 PyBuster.py -f wordlists/common.txt -d -o subs.txt example.com
 ```
+> This will return a list of directory path's in a file called ***subs.txt***
 
 ### 3) Try extensions and save JSON
 
 ```bash
-python3 PyBuster.py -f wordlists/common.txt --ext .php,.html --output-format json -o results.json example.com
+python3 PyBuster.py -f wordlists/common.txt --ext php, html --output-format json -o results.json example.com
 ```
+> This will return all extension's containing php and html in json format to a file called ***results.json***
 
-The `--ext` list accepts values with or without a leading dot; `.php` and `php` are normalized the same.
+> [!NOTE] 
+> The `--ext` list accepts values with or without a leading dot; `.php` and `php` are normalized the same.
 
 ### 4) Resume an interrupted run (safe — won't delete previous results)
 
 ```bash
 python3 PyBuster.py -f wordlists/biglist.txt --resume -o results.txt example.com
 ```
+> This will return all subdomain's and directory path's to a file called results.txt if they aren't already there
 
-`--resume` loads URLs from `results.txt` and **skips** those when scanning. It also implicitly enables appending so your previous file is preserved.
+### 5) Search directories from multiple domain's 
+
+```bash
+python3 PyBuster.py -f path/to/wordlist -mT path/to/targets.txt -oF json -o results.json -d
+```
+> This will return all directories from the domain's in path/to/targets.txt in json format to a file called ***result.json***
 
 ---
 
@@ -56,16 +66,23 @@ python3 PyBuster.py -f wordlists/biglist.txt --resume -o results.txt example.com
 
 ---
 
-## Flags quick reference
+## How to use the flags
 
-* `-f, --file <path>` (required) — wordlist file, one word per line.
-* `-o, --output <path>` — output file (default `directories.txt`).
-* `--ext <comma list>` — extensions to try (e.g. `.php,.html`).
-* `-s, --subs-only` — only try raw directory paths (no extensions).
-* `--resume` — load existing output and skip those URLs (implies append).
-* `--append` — append to the output file instead of overwriting.
-* `--output-format` — `raw|json|csv`.
-* `--version` — print version and exit.
+- `-f, --file /path/to/wordlist.txt` - path to wordlist (required)
+
+- `-o, --output /path/to/output` - output file (default: directories.txt)
+
+- `-x, --ext php, html, json` - comma separated extensions (e.g. php, html)
+
+- `-d, --dirs-only`- only try directory paths (no extensions)
+
+- `-r, --resume` - skip URLs already present in output
+
+- `-a, --append` - append to output file instead of overwrite
+
+- `-oF, --output-format json` - raw / json / csv
+
+- `-mT, --multiple-targets /path/to/targets` - file with multiple domains (one per line)
 
 ---
 
