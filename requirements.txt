@@ -1,0 +1,7 @@
+requests
+argparse
+sys
+json
+csv
+pathlib
+typing
