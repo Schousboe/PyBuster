@@ -1,4 +1,7 @@
 name: Update CHANGELOG
+permissions:
+  contents: write
+
 
 # Trigger on new Git tags
 on:
@@ -17,6 +20,7 @@ jobs:
         with:
           fetch-depth: 0     
           fetch-tags: true   
+          persist-credentials: true
 
 
       - name: Set up Go
