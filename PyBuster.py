@@ -4,10 +4,19 @@ import argparse
 import sys
 import json
 import csv
+import subprocess
 from pathlib import Path
 from typing import List, Set
 
-VERSION = "PyBuster 1.1"
+def get_version():
+    try:
+        # Get the latest tag reachable from HEAD
+        tag = subprocess.check_output(["git", "describe", "--tags", "--abbrev=0"]).decode().strip()
+        return f"PyBuster {tag}"
+    except Exception:
+        return "PyBuster (dev)"
+
+VERSION = get_version()
 
 def build_candidate_urls(domain: str, word: str, exts: List[str], subs_only: bool = False) -> List[str]:
     candidates = []
