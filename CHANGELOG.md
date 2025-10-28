@@ -2,6 +2,7 @@
 ## [Unreleased]
 
 ### Bug Fixes
+- Switched subs_only to dirs_only after latest updates
 - Fix permission trouble with .chglog
 
 ### Documentation
