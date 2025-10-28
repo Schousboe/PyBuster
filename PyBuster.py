@@ -17,7 +17,7 @@ def get_version():
 
 VERSION = get_version()
 
-def build_candidate_urls(domain: str, word: str, exts: List[str], subs_only: bool = False) -> List[str]:
+def build_candidate_urls(domain: str, word: str, exts: List[str], dirs_only: bool = False) -> List[str]:
     candidates = []
     base_candidates = []
     domain = domain.rstrip('/')
@@ -27,7 +27,7 @@ def build_candidate_urls(domain: str, word: str, exts: List[str], subs_only: boo
         base_candidates = [f"https://{domain}", f"http://{domain}"]
     for base in base_candidates:
         candidates.append(f"{base}/{word}")
-    if not subs_only:
+    if not dirs_only:
         for ext in exts:
             e = ext if ext.startswith('.') else f".{ext}"
             for base in base_candidates:
@@ -138,7 +138,7 @@ def scan_domain(domain: str, args):
             if e:
                 exts.append(e)
 
-    if args.subs_only:
+    if args.dirs_only:
         exts = []
 
     seen = set()
@@ -151,7 +151,7 @@ def scan_domain(domain: str, args):
     print(f"\n[SCAN] Target: {domain} ({len(words)} words)\n")
 
     for word in words:
-        candidates = build_candidate_urls(domain, word, exts, subs_only=args.subs_only)
+        candidates = build_candidate_urls(domain, word, exts, dirs_only=args.dirs_only)
         for url in candidates:
             if args.resume and url in seen:
                 break
