@@ -1,7 +1,10 @@
+<!-- markdownlint-disable MD024 -->
+
 <a name="unreleased"></a>
 ## [Unreleased]
 
 ### Bug Fixes
+- Disable markdownlint rule MD024/no-duplicate-heading to avoid false-positives
 - Links in README getting 404 because of wrong path
 - Switched subs_only to dirs_only after latest updates
 - Fix permission trouble with .chglog
