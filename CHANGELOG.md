@@ -6,6 +6,7 @@
 - Fix permission trouble with .chglog
 
 ### Documentation
+- Drastic overhaul of both README and CONTRIBUTING
 - Cleanup docs
 
 ### Features
