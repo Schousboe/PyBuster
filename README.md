@@ -11,15 +11,15 @@
   <br/>
 
   <p align="center">
-    <a href="features">Features</a> 
+    <a href="#features">Features</a> 
     •
     <a href="#install">Install</a> 
     •
     <a href="#usage">Usage</a> 
     •
-    <a href="fFlags">Flags</a> 
+    <a href="#flags">Flags</a> 
     •
-    <a href="github.com/Schousboe/PyBuster/LICENSE">License</a>
+    <a href="LICENSE">License</a>
 
    Love the project? Please consider leaving a star 🌟
   </p>
