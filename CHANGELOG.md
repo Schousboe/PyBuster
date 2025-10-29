@@ -2,6 +2,7 @@
 ## [Unreleased]
 
 ### Bug Fixes
+- Links in README getting 404 because of wrong path
 - Switched subs_only to dirs_only after latest updates
 - Fix permission trouble with .chglog
 
