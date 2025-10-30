@@ -12,6 +12,8 @@
 - Fix permission trouble with .chglog
 
 ### Chores
+- fix wrong description in bug_report.yml
+- update CHANGELOG.md [skip ci]
 - update CHANGELOG.md [skip ci]
 - Add detailed bug_report template with accepting to terms and config.yml to ensure no blank issues
 - update CHANGELOG.md [skip ci]
