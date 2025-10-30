@@ -1,11 +1,10 @@
 name: Feature Request
 description: Submit a request for a new feature for PyBuster.
-assignees: Schousboe
-labels: feature-request
+assignees: ["Schousboe"]
+labels: ["feature-request"]
 title: "[FEATURE-REQUEST]: "
 
 body:
-
   - type: markdown
     attributes:
       value: |
@@ -29,43 +28,40 @@ body:
 
   - type: checkboxes
     id: business_impact
+    attributes:
+      label: "Select the technical impact"
+      description: "Which of these does the request help with?"
+      options:
+        - label: Find more vulnerabilities
+        - label: Reduce false positives
+        - label: Speed up scanning
+        - label: Add support for new protocols / endpoints
+        - label: Improve reporting / log accuracy
+        - label: Enhance integrations with other tools
+        - label: Improve stability / avoid crashes
+        - label: Reduce manual effort
+        - label: Other
     validations:
       required: true
-    attributes:
-      label: "Select the business impact"
-      description: "Which of these does the request help with?"
-    validations:
-      multiple: true
-
-      options:
-        - Find more vulnerabilities
-        - Reduces false positives in scan results
-        - Speeds up scanning / makes scans faster
-        - Adds support for new protocols / endpoints
-        - Improves reporting / log accuracy
-        - Makes integrations with other tools easier
-        - Enhances security / avoids crashes during scanning
-        - Reduces manual effort for users
-        - Other
 
   - type: checkboxes
     id: cost_of_not_doing
+    attributes:
+      label: "Cost of not doing this"
+      options:
+        - label: Missed vulnerabilities
+        - label: Slower recon / scans
+        - label: Higher false positives / false negatives
+        - label: Manual effort required
+        - label: Users switch to other tools
+        - label: Falling behind modern targets
     validations:
       required: true
-    attributes:
-      label: "Describe the cost of not doing this request"
-      options:
-        - Missed vulnerabilities
-        - Slower recon / scans
-        - Higher false positives / false negatives
-        - Manual effort required
-        - Users switch to other tools
-        - Falling behind modern targets
 
   - type: dropdown
     id: urgency
     attributes:
-      label: "Describe how urgent this request is"
+      label: "How urgent is this request?"
       options:
         - Low
         - Medium
@@ -77,22 +73,21 @@ body:
   - type: textarea
     id: solution_ideas
     attributes:
-      label: "Describe any ideas you have on how we can solve for this"
-      description: "Our team might invite you to join us for a brainstorm / co-creation session if you're up for it."
+      label: "Describe any implementation ideas"
+      description: "If you have thoughts on how to build this, add them here."
 
   - type: textarea
     id: additional
     attributes:
       label: Additional context
-      description: |
-        Add any other relevant info for the feature.
+      description: Add any other relevant info for the feature.
 
   - type: input
     id: contact
     attributes:
-      label: Contact details
-      placeholder: "e.g: email@example.com"
-      description: How can we get in touch with you if we need more info?
+      label: Contact details (optional)
+      placeholder: "email@example.com"
+      description: "Optional — helps us if we need follow-up questions"
 
   - type: checkboxes
     id: terms
@@ -101,7 +96,5 @@ body:
       description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT).
       options:
         - label: I agree to follow this project's Code of Conduct
-          required: true
-  
-
-
+    validations:
+      required: true
