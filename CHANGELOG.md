@@ -10,6 +10,7 @@
 - Fix permission trouble with .chglog
 
 ### Documentation
+- Fix a bug in the list in CONTRIBUTING.md for formatting
 - Drastic overhaul of both README and CONTRIBUTING
 - Cleanup docs
 
