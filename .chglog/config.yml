@@ -5,19 +5,18 @@ info:
   repository_url: https://github.com/Schousboe/PyBuster
 options:
   commits:
-     filters:
-       exclude: 
+    filters:
+      exclude:
         - "update CHANGELOG.md [skip ci]"
-       include:
-        Type:
-          - feat
-          - fix
-          - chore
-          - perf
-          - refactor
-          - ci/cd
-          - test
-          - docs
+      include:
+        - feat
+        - fix
+        - chore
+        - perf
+        - refactor
+        - ci/cd
+        - test
+        - docs
   commit_groups:
      title_maps:
        feat: Features
