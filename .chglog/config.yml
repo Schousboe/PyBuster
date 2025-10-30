@@ -9,6 +9,7 @@ options:
        Type:
          - feat
          - fix
+         - chore
          - perf
          - refactor
          - ci/cd
@@ -19,6 +20,7 @@ options:
        feat: Features
        fix: Bug Fixes
        perf: Performance Improvements
+       chore: Chores
        refactor: Code Refactoring
        ci/cd: Continous integration/Cointinous Delivery
        test: Tests
