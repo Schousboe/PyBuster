@@ -6,6 +6,9 @@ info:
 options:
   commits:
      filters:
+       exclude: 
+        - "update CHANGELOG.md [skip ci]"
+
        Type:
          - feat
          - fix
