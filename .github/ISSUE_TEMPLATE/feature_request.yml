@@ -28,31 +28,31 @@ body:
 
   - type: checkboxes
     id: business_impact
+    validations:
+      required: true
     attributes:
       label: "Select the business impact"
-      validations:
-        required: true
       description: "Which of these does the request help with?"
       multiple: true
 
       options:
-        Find more vulnerabilities
+        - Find more vulnerabilities
 
-        Reduces false positives in scan results
+        - Reduces false positives in scan results
 
-        Speeds up scanning / makes scans faster
+        - Speeds up scanning / makes scans faster
 
-        Adds support for new protocols / endpoints
+        - Adds support for new protocols / endpoints
 
-        Improves reporting / log accuracy
+        - Improves reporting / log accuracy
 
-        Makes integrations with other tools easier
+        - Makes integrations with other tools easier
 
-        Enhances security / avoids crashes during scanning
+        - Enhances security / avoids crashes during scanning
 
-        Reduces manual effort for users
+        - Reduces manual effort for users
 
-        Other
+        - Other
 
   - type: checkboxes
     id: cost_of_not_doing
@@ -61,17 +61,17 @@ body:
     attributes:
       label: "Describe the cost of not doing this request"
       options:
-        Missed vulnerabilities
+        - Missed vulnerabilities
 
-        Slower recon / scans
+        - Slower recon / scans
 
-        Higher false positives / false negatives
+        - Higher false positives / false negatives
 
-        Manual effort required
+        - Manual effort required
 
-        Users switch to other tools
+        - Users switch to other tools
 
-        Falling behind modern targets
+        - Falling behind modern targets
 
   - type: dropdown
     id: urgency
