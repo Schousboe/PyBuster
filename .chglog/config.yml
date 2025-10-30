@@ -8,7 +8,7 @@ options:
     filters:
       exclude:
         - "update CHANGELOG.md [skip ci]"
-      include:
+      Type:
         - feat
         - fix
         - chore
@@ -17,16 +17,7 @@ options:
         - ci/cd
         - test
         - docs
-  commit_groups:
-     title_maps:
-       feat: Features
-       fix: Bug Fixes
-       perf: Performance Improvements
-       chore: Chores
-       refactor: Code Refactoring
-       ci/cd: Continous integration/Cointinous Delivery
-       test: Tests
-       docs: Documentation
+
   header:
     pattern: "^(\\w*)\\:\\s(.*)$"
     pattern_maps:
