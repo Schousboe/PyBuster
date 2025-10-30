@@ -1,0 +1,118 @@
+name: Feature Request
+description: Submit a request for a new feature for PyBuster.
+assignees: Schousboe
+labels: feature-request
+title: "[FEATURE-REQUEST]: "
+
+body:
+
+  - type: markdown
+    attributes:
+      value: Thanks for filling this feature-request template so we can get some new features! :)
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Describe the exact feature you want"
+      description: "Explain the feature and how it would make PyBuster better"
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_impact
+    attributes:
+      label: "Describe the impact that this has on users"
+      description: "How does this feature affect users?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: business_impact
+    attributes:
+      label: "Select the business impact"
+      validations:
+        required: true
+      description: "Which of these does the request help with?"
+      multiple: true
+
+      options:
+        Find more vulnerabilities
+
+        Reduces false positives in scan results
+
+        Speeds up scanning / makes scans faster
+
+        Adds support for new protocols / endpoints
+
+        Improves reporting / log accuracy
+
+        Makes integrations with other tools easier
+
+        Enhances security / avoids crashes during scanning
+
+        Reduces manual effort for users
+
+        Other
+
+  - type: checkboxes
+    id: cost_of_not_doing
+    validations:
+      required: true
+    attributes:
+      label: "Describe the cost of not doing this request"
+      options:
+        Missed vulnerabilities
+
+        Slower recon / scans
+
+        Higher false positives / false negatives
+
+        Manual effort required
+
+        Users switch to other tools
+
+        Falling behind modern targets
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: "Describe how urgent this request is"
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true    
+
+  - type: textarea
+    id: solution_ideas
+    attributes:
+      label: "Describe any ideas you have on how we can solve for this"
+      description: "Our team might invite you to join us for a brainstorm / co-creation session if you're up for it."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: |
+        Add any other relevant info for the feature.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact details
+      placeholder: "e.g: email@example.com"
+      description: How can we get in touch with you if we need more info?
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  
+
+
