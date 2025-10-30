@@ -33,7 +33,7 @@ body:
   id: type
   attributes:
     label: Bug type
-    description: On which device you are facing the bug?
+    description: What type of bug is it?
     options:
         - Crash or exception
         - Incorrect scan results
