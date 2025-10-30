@@ -6,18 +6,12 @@
 
 ---
 
-<div align=center>
-<p>Always love to see your suggestions! We need to make this the best version it can be, and therefore we of course need some people who a down to:</p>
-<ul style="display:inline-block; text-align:left;"><strong>
-<li> Reporting an issue
-<li> Supposing a fix
-<li> Proposing new features
-</strong>
-</ul>
+Always love to see your suggestions! We need to make this the best version it can be, and therefore we of course need some people who are down to:</p>
 
-</div>
+- Reporting an issue
+- Supposing a fix
+- Proposing new features
 
-<br/>
 
 ## How to contribute
 
