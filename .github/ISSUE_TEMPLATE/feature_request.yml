@@ -1,7 +1,7 @@
 name: Feature Request
 description: Submit a request for a new feature for PyBuster.
 assignees: ["Schousboe"]
-labels: ["feature-request"]
+labels: ["enhancement"]
 title: "[FEATURE-REQUEST]: "
 
 body:
@@ -26,21 +26,22 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: business_impact
     attributes:
       label: "Select the technical impact"
+      multiple: true
       description: "Which of these does the request help with?"
       options:
-        - label: Find more vulnerabilities
-        - label: Reduce false positives
-        - label: Speed up scanning
-        - label: Add support for new protocols / endpoints
-        - label: Improve reporting / log accuracy
-        - label: Enhance integrations with other tools
-        - label: Improve stability / avoid crashes
-        - label: Reduce manual effort
-        - label: Other
+        - Find more vulnerabilities
+        - Reduce false positives
+        - Speed up scanning
+        - Add support for new protocols / endpoints
+        - Improve reporting / log accuracy
+        - Enhance integrations with other tools
+        - Improve stability / avoid crashes
+        - Reduce manual effort
+        - Other
     validations:
       required: true
 
@@ -48,13 +49,15 @@ body:
     id: cost_of_not_doing
     attributes:
       label: "Cost of not doing this"
+      multiple: true
       options:
-        - label: Missed vulnerabilities
-        - label: Slower recon / scans
-        - label: Higher false positives / false negatives
-        - label: Manual effort required
-        - label: Users switch to other tools
-        - label: Falling behind modern targets
+        - Missed vulnerabilities
+        - Slower recon / scans
+        - Higher false positives / false negatives
+        - Manual effort required
+        - Users switch to other tools
+        - Falling behind modern targets
+        - Other
     validations:
       required: true
 
