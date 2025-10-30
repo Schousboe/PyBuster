@@ -1,0 +1,93 @@
+name: "Bug report"
+description: Create a report to help us fix your issue
+assignees: Schousboe
+labels: 'bug'
+title: "[BUG]: "
+body:
+
+- type: markdown
+  attributes:
+    value: Thanks for filling this out with so we can fix all errors with the code! :)
+
+- type: textarea
+  id: description
+  attributes:
+    label: Describe the bug
+    placeholder: It is a ... when i expect ... because of ...
+    description: |
+      Add a clear and concise description of what you think the bug is.
+  validations:
+    required: true
+
+- type: textarea
+  id: reproduce
+  attributes:
+    label: Steps to reproduce the behaviour
+    placeholder: "e.g: 1. Go to ... 2. Write ... 
+    description: |
+      List the steps required to reproduce the issue.
+  validations:
+    required: true
+
+- type: dropdown
+  id: type
+  attributes:
+    label: Bug type
+    description: On which device you are facing the bug?
+    options:
+        - Crash or exception
+        - Incorrect scan results
+        - Performance issue
+        - Installation or import failure
+        - CLI argument not working
+        - Wordlist handling issue
+        - Output formatting issue
+        - Other
+  validations:
+    required: true
+
+- type: textarea
+  id: system
+  attributes:
+    label: System
+    description: |
+      Provide environment details.
+    placeholder: |
+      OS: ...
+      Python: ...
+      PyBuster version: v....
+      Install: pip / source / virtualenv
+      Shell: bash / zsh / PowerShell    
+  validations:
+    required: true
+
+- type: textarea
+  id: logs
+  attributes:
+    label: Logs
+    placeholder: ...
+    description: |
+      Paste the exact error code if you got one
+
+- type: textarea
+  id: additional
+  attributes:
+    label: Additional context
+    description: |
+      Add any other relevant context for the problem.
+
+- type: input
+  id: contact
+  attributes:
+    label: Contact details
+    placeholder: "e.g: email@example.com"
+    description: How can we get in touch with you if we need more info?
+
+- type: checkboxes
+  id: terms
+  attributes:
+    label: Code of Conduct
+    description: By submitting this issue, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT).
+    options:
+      - label: I agree to follow this project's Code of Conduct
+        required: true
