@@ -8,16 +8,16 @@ options:
      filters:
        exclude: 
         - "update CHANGELOG.md [skip ci]"
-
-       Type:
-         - feat
-         - fix
-         - chore
-         - perf
-         - refactor
-         - ci/cd
-         - test
-         - docs
+       include:
+        Type:
+          - feat
+          - fix
+          - chore
+          - perf
+          - refactor
+          - ci/cd
+          - test
+          - docs
   commit_groups:
      title_maps:
        feat: Features
