@@ -4,6 +4,7 @@
 ## [Unreleased]
 
 ### Bug Fixes
+- Add missing quatation mark so the bug_report.yml does not break
 - Add chore scope to changelog
 - Disable markdownlint rule MD024/no-duplicate-heading to avoid false-positives
 - Links in README getting 404 because of wrong path
@@ -11,6 +12,7 @@
 - Fix permission trouble with .chglog
 
 ### Chores
+- update CHANGELOG.md [skip ci]
 - Add detailed bug_report template with accepting to terms and config.yml to ensure no blank issues
 - update CHANGELOG.md [skip ci]
 - update CHANGELOG.md [skip ci]
