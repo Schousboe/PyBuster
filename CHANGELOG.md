@@ -4,10 +4,23 @@
 ## [Unreleased]
 
 ### Bug Fixes
+- Add chore scope to changelog
 - Disable markdownlint rule MD024/no-duplicate-heading to avoid false-positives
 - Links in README getting 404 because of wrong path
 - Switched subs_only to dirs_only after latest updates
 - Fix permission trouble with .chglog
+
+### Chores
+- Add detailed bug_report template with accepting to terms and config.yml to ensure no blank issues
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
+- update CHANGELOG.md [skip ci]
 
 ### Documentation
 - Fix a bug in the list in CONTRIBUTING.md for formatting
