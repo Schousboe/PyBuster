@@ -1,0 +1,31 @@
+name: Documentation
+description: Improve docs, README, wiki, etc.
+title: "[DOCS]: "
+labels: [documentation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make to making the docs better!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What's wrong or missing?"
+      placeholder: The usage section in the README is not up to date
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix / addition (Optional)
+      placeholder: Change the Usage section in the README
+      description: 
+
+  - type: input
+    id: page
+    attributes:
+      label: Page / section (Optional)
+      placeholder: README.md, wiki/usage.md
+      description: What have you changed?
