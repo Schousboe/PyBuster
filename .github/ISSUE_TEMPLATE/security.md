@@ -14,7 +14,7 @@ assignees:
 > (e.g., crashes, RCE, data leaks, bypasses, etc.).  
 >  
 > **For vulnerabilities you discovered *in the targets you scanned*** (web apps, APIs, etc.),  
-> please **report them to the target owner** or discuss them in our **[Discussions](https://github.com/yourusername/PyBuster/discussions)**.
+> please **report them to the target owner** or discuss them in our **[Discussions](https://github.com/Schousboe/PyBuster/discussions)**.
 
 Thanks for helping keep PyBuster safe! We aim to respond within **48 hours**.
 
