@@ -61,6 +61,8 @@ It aims to provide a minimal yet powerful CLI interface similar to Gobuster, wit
 
 - Scan many different domains in one with `-mT`
 
+- Scan specific ports with `-p`
+
 ---
 
 ## Install
@@ -127,6 +129,8 @@ python3 PyBuster.py -f path/to/wordlist.txt -x .log -oF csv -o /path/to/output.c
 - **-oF, --output-format** - raw / json / csv
 
 - **-mT, --multiple-targets** - file with multiple domains (one per line)
+
+- **-p, --ports** - comma-separated ports to scan (e.g. 80,443,8080)
 
 
 ## Contributing

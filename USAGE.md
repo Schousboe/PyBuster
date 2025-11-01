@@ -42,14 +42,21 @@ python3 PyBuster.py -f wordlists/common.txt --ext php, html --output-format json
 > [!NOTE] 
 > The `--ext` list accepts values with or without a leading dot; `.php` and `php` are normalized the same.
 
-### 4) Resume an interrupted run (safe — won't delete previous results)
+### 4) Resume an interrupted run (safe - won't delete previous results)
 
 ```bash
 python3 PyBuster.py -f wordlists/biglist.txt --resume -o results.txt example.com
 ```
 > This will return all subdomain's and directory path's to a file called results.txt if they aren't already there
 
-### 5) Search directories from multiple domain's 
+### 6) Scan custom ports (e.g. 8080, 8443)
+
+```bash
+python3 PyBuster.py -f path/to/wordlist.txt -p 80,8080,8443 example.com
+```
+> This will scan ports 80, 8080 and 8433
+
+### 5) Search directories from multiple domain's and output as JSON
 
 ```bash
 python3 PyBuster.py -f path/to/wordlist -mT path/to/targets.txt -oF json -o results.json -d
@@ -83,6 +90,8 @@ python3 PyBuster.py -f path/to/wordlist -mT path/to/targets.txt -oF json -o resu
 - `-oF, --output-format json` - raw / json / csv
 
 - `-mT, --multiple-targets /path/to/targets` - file with multiple domains (one per line)
+
+- `-p, --ports 80,443,8080` - comma-separated ports to scan (default: 80,443)
 
 ---
 
