@@ -17,14 +17,20 @@ def get_version():
 
 VERSION = get_version()
 
-def build_candidate_urls(domain: str, word: str, exts: List[str], dirs_only: bool = False) -> List[str]:
+def build_candidate_urls(domain: str, word: str, exts: List[str], dirs_only: bool = False, port: int = None) -> List[str]:
     candidates = []
     base_candidates = []
     domain = domain.rstrip('/')
     if domain.startswith(("http://", "https://")):
         base_candidates = [domain]
     else:
-        base_candidates = [f"https://{domain}", f"http://{domain}"]
+        protocol = "https" if port == 443 else "http"
+        base = domain
+        if port is not None and port not in (80, 443):
+            base = f"{domain}:{port}"
+        full_base = f"{protocol}://{base}"
+        base_candidates = [full_base]
+
     for base in base_candidates:
         candidates.append(f"{base}/{word}")
     if not dirs_only:
@@ -150,21 +156,23 @@ def scan_domain(domain: str, args):
     found_dirs = []
     print(f"\n[SCAN] Target: {domain} ({len(words)} words)\n")
 
-    for word in words:
-        candidates = build_candidate_urls(domain, word, exts, dirs_only=args.dirs_only)
-        for url in candidates:
-            if args.resume and url in seen:
-                break
-            try:
-                resp = requests.get(url, timeout=5)
-                if resp.status_code < 400:
-                    print(f"[FOUND] {url} ({resp.status_code})")
-                    entry = {'url': url, 'status': resp.status_code}
-                    found_dirs.append(entry)
-                    seen.add(url)
+    for port in args.ports:
+        print(f"[PORT] Scanning on port {port}...")
+        for word in words:
+            candidates = build_candidate_urls(domain, word, exts, dirs_only=args.dirs_only, port=port)
+            for url in candidates:
+                if args.resume and url in seen:
                     break
-            except requests.RequestException:
-                pass
+                try:
+                    resp = requests.get(url, timeout=5)
+                    if resp.status_code < 400:
+                        print(f"[FOUND] {url} ({resp.status_code})")
+                        entry = {'url': url, 'status': resp.status_code}
+                        found_dirs.append(entry)
+                        seen.add(url)
+                        break
+                except requests.RequestException:
+                    pass
 
     try:
         if args.output_format == 'raw':
@@ -179,7 +187,6 @@ def scan_domain(domain: str, args):
     print(f"[DONE] {domain}: {len(found_dirs)} results written to {out_path}")
 
 def read_targets_file(path: Path) -> List[str]:
-    """Read a file with one domain per line. Ignore blank lines & comments (#)."""
     targets = []
     if not path.is_file():
         raise FileNotFoundError(f"Targets file not found: {path}")
@@ -200,6 +207,7 @@ def main():
     parser.add_argument("-a", "--append", action="store_true", help="Append instead of overwrite")
     parser.add_argument("-oF", "--output-format", choices=['raw', 'json', 'csv'], default='raw', help="Output format")
     parser.add_argument("-d", "--dirs-only", action="store_true", help="Only try directories (no extensions)")
+    parser.add_argument("-p", "--ports", type=str, default="80,443", help="Comma-separated ports to scan (e.g. 80,443,8080)")
     parser.add_argument("--version", action="store_true", help="Show version and exit")
     parser.add_argument("domain", nargs="?", help="Target domain (example.com or http(s)://example.com[:port])")
 
@@ -211,6 +219,8 @@ def main():
 
     if args.resume and not args.append:
         args.append = True
+
+    args.ports = [int(p.strip()) for p in args.ports.split(",") if p.strip()]
 
     if not args.domain and not args.targets:
         print("[ERROR] You must specify either a single domain or --multiple-targets file.", file=sys.stderr)
