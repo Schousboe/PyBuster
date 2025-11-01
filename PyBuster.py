@@ -156,23 +156,32 @@ def scan_domain(domain: str, args):
     found_dirs = []
     print(f"\n[SCAN] Target: {domain} ({len(words)} words)\n")
 
+    VALID_CODES = {200, 301, 302, 307, 401, 403,}
+
     for port in args.ports:
         print(f"[PORT] Scanning on port {port}...")
         for word in words:
             candidates = build_candidate_urls(domain, word, exts, dirs_only=args.dirs_only, port=port)
             for url in candidates:
                 if args.resume and url in seen:
+                    print(f"[SKIP] {url}")
                     break
                 try:
-                    resp = requests.get(url, timeout=5)
-                    if resp.status_code < 400:
-                        print(f"[FOUND] {url} ({resp.status_code})")
-                        entry = {'url': url, 'status': resp.status_code}
+                    print(f"[TRY] {url}", end=" ")
+                    resp = requests.get(url, timeout=5, allow_redirects=True)
+                    print(f"→ {resp.status_code}")
+
+                    if resp.status_code in VALID_CODES:
+                        print(f"[FOUND] {resp.url} ({resp.status_code})")
+                        entry = {'url': resp.url, 'status': resp.status_code}
                         found_dirs.append(entry)
-                        seen.add(url)
+                        seen.add(resp.url)
                         break
-                except requests.RequestException:
-                    pass
+                    else:
+                        print(f"[MISS] {resp.status_code}")
+
+                except requests.RequestException as e:
+                    print(f"[ERROR] {type(e).__name__}")
 
     try:
         if args.output_format == 'raw':
@@ -184,7 +193,7 @@ def scan_domain(domain: str, args):
     except Exception as e:
         print(f"[ERROR] Failed to write output: {e}", file=sys.stderr)
 
-    print(f"[DONE] {domain}: {len(found_dirs)} results written to {out_path}")
+    print(f"\n[DONE] {domain}: {len(found_dirs)} results written to {out_path}")
 
 def read_targets_file(path: Path) -> List[str]:
     targets = []
