@@ -45,6 +45,7 @@ All notable changes to this project will be documented in this file.
 - Add detailed bug_report template with accepting to terms and config.yml to ensure no blank issues
 - Fix wrong description in bug_report.yml
 - Add /ISSUE_TEMPLATE/documentation.yml for questions/additions to the docs
+- Replace git-chglog with git-cliff and update workflow
 
 
 ### Other (unconventional)
@@ -55,9 +56,9 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 33 commits
-- 5 day(s) span
-- 30 conventional
+- 34 commits
+- 6 day(s) span
+- 31 conventional
 - 0 linked issues
 
 
