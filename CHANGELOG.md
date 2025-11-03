@@ -1,7 +1,7 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-## Unreleased
+## 2.0.0 - 2025-11-03
 
 
 
@@ -48,6 +48,7 @@ All notable changes to this project will be documented in this file.
 - Fix wrong description in bug_report.yml
 - Add /ISSUE_TEMPLATE/documentation.yml for questions/additions to the docs
 - Replace git-chglog with git-cliff and update workflow
+- Release 2.0.0
 
 
 ### Other (unconventional)
@@ -58,9 +59,9 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 36 commits
+- 37 commits
 - 7 day(s) span
-- 33 conventional
+- 34 conventional
 - 0 linked issues
 
 
