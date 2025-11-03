@@ -32,6 +32,7 @@ All notable changes to this project will be documented in this file.
 - Add a ISSUE_TEMPLATE/security.md for people to disclose security vulns private
 - Update README and USAGE with the lates -p change
 - Add 'release it' for automatic releases with a json file
+- Update .release-it.json to display a more descriptive commit-message and add releaseName
 
 
 ### Features
@@ -57,9 +58,9 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 35 commits
+- 36 commits
 - 7 day(s) span
-- 32 conventional
+- 33 conventional
 - 0 linked issues
 
 
