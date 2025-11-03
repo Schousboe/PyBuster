@@ -31,6 +31,7 @@ All notable changes to this project will be documented in this file.
 - Fix a bug in the list in CONTRIBUTING.md for formatting
 - Add a ISSUE_TEMPLATE/security.md for people to disclose security vulns private
 - Update README and USAGE with the lates -p change
+- Add 'release it' for automatic releases with a json file
 
 
 ### Features
@@ -56,13 +57,13 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 34 commits
-- 6 day(s) span
-- 31 conventional
+- 35 commits
+- 7 day(s) span
+- 32 conventional
 - 0 linked issues
 
 
-- 6 day(s) since last release
+- 7 day(s) since last release
 
 ## 1.0.0 - 2025-10-27
 
