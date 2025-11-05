@@ -1,6 +1,24 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## Unreleased
+
+
+
+### Miscellaneous Tasks
+- Add devcontainer.json and dependabot.yml to customize gh codespaces on startup
+
+
+
+### Commit Statistics
+- 1 commits
+- 0 day(s) span
+- 1 conventional
+- 0 linked issues
+
+
+- 2 day(s) since last release
+
 ## 2.0.0 - 2025-11-03
 
 
