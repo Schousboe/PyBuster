@@ -13,7 +13,7 @@ updates:
    assignees:
     - "Schousboe"
    labels:
-      - "depencencies"
+      - "dependencies"
       - "devcontainer"
   
 
