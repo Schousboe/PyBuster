@@ -7,17 +7,18 @@ All notable changes to this project will be documented in this file.
 
 ### Miscellaneous Tasks
 - Add devcontainer.json and dependabot.yml to customize gh codespaces on startup
+- Correct spelling mistake in 'labels' section in dependabot.yml
 
 
 
 ### Commit Statistics
-- 1 commits
-- 0 day(s) span
-- 1 conventional
+- 2 commits
+- 1 day(s) span
+- 2 conventional
 - 0 linked issues
 
 
-- 2 day(s) since last release
+- 3 day(s) since last release
 
 ## 2.0.0 - 2025-11-03
 
