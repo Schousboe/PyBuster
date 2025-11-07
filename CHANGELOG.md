@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 
 ### Documentation
 - Add PyBuster logo and reference it in README
+- Make logo smaller and update version number in badge
 
 
 ### Miscellaneous Tasks
@@ -16,9 +17,9 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 3 commits
+- 4 commits
 - 2 day(s) span
-- 3 conventional
+- 4 conventional
 - 0 linked issues
 
 
