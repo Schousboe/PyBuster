@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 
 
 
+### Documentation
+- Add PyBuster logo and reference it in README
+
+
 ### Miscellaneous Tasks
 - Add devcontainer.json and dependabot.yml to customize gh codespaces on startup
 - Correct spelling mistake in 'labels' section in dependabot.yml
@@ -12,13 +16,13 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 2 commits
-- 1 day(s) span
-- 2 conventional
+- 3 commits
+- 2 day(s) span
+- 3 conventional
 - 0 linked issues
 
 
-- 3 day(s) since last release
+- 4 day(s) since last release
 
 ## 2.0.0 - 2025-11-03
 
