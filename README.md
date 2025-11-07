@@ -1,11 +1,17 @@
 <div align="center">
  <h1>PyBuster</h1>
-  <img src="docs/images/logo.png" alt="PyBuster logo"/>
+  <img src="docs/images/logo.png" alt="PyBuster logo" width="1800px"/>
+</div>
+
+<br>
+
+<div align="center">
+  
   <p><b>Fast, lightweight and secure directory brute-forcer written in Python</b></p>
 
    ![PyBuster-stats](https://github-readme-stats.vercel.app/api/pin/?username=Schousboe&repo=PyBuster&theme=dark&icon_color=00FF88")
 
-  <img src="https://img.shields.io/badge/version-1.1-blue.svg" alt="version">
+  <img src="https://img.shields.io/badge/version-2.0.0-blue.svg" alt="version">
   <img src="https://img.shields.io/github/license/Schousboe/PyBuster?color=blue" alt="license">
   <img src="https://img.shields.io/github/issues/Schousboe/PyBuster?color=green" alt="issues">
 
