@@ -1,5 +1,6 @@
 <div align="center">
  <h1>PyBuster</h1>
+  <img src="docs/images/logo.png" alt="PyBuster logo"/>
   <p><b>Fast, lightweight and secure directory brute-forcer written in Python</b></p>
 
    ![PyBuster-stats](https://github-readme-stats.vercel.app/api/pin/?username=Schousboe&repo=PyBuster&theme=dark&icon_color=00FF88")
