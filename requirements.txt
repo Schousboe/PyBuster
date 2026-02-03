@@ -1,8 +1,8 @@
 requests
 argparse
-sys
 json
 csv
+colorama
 subprocess
 pathlib
 typing

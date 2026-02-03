@@ -4,6 +4,7 @@ import argparse
 import sys
 import json
 import csv
+from colorama import Fore, Back, Style
 import subprocess
 from pathlib import Path
 from typing import List, Set
@@ -172,13 +173,13 @@ def scan_domain(domain: str, args):
                     print(f"→ {resp.status_code}")
 
                     if resp.status_code in VALID_CODES:
-                        print(f"[FOUND] {resp.url} ({resp.status_code})")
+                        print(Fore.GREEN + f"[FOUND] {resp.url} ({resp.status_code})" + Style.RESET_ALL)
                         entry = {'url': resp.url, 'status': resp.status_code}
                         found_dirs.append(entry)
                         seen.add(resp.url)
                         break
                     else:
-                        print(f"[MISS] {resp.status_code}")
+                        print(Fore.RED + f"[MISS] {resp.status_code}" + Style.RESET_ALL)
 
                 except requests.RequestException as e:
                     print(f"[ERROR] {type(e).__name__}")
