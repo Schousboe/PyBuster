@@ -13,7 +13,11 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 - Add devcontainer.json and dependabot.yml to customize gh codespaces on startup
 - Correct spelling mistake in 'labels' section in dependabot.yml
+- Remove wrong info in changelog
 
+
+### Other (unconventional)
+- Add colour with colorama to [MISS] and [FOUND]
 
 
 ### Styling
@@ -22,9 +26,9 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 6 commits
+- 7 commits
 - 90 day(s) span
-- 6 conventional
+- 7 conventional
 - 0 linked issues
 
 
