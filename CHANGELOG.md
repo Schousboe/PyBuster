@@ -15,15 +15,19 @@ All notable changes to this project will be documented in this file.
 - Correct spelling mistake in 'labels' section in dependabot.yml
 
 
+### Other (unconventional)
+- Add colour with colorama to [MISS] and [FOUND]
+
+
 
 ### Commit Statistics
-- 4 commits
-- 2 day(s) span
-- 4 conventional
+- 5 commits
+- 90 day(s) span
+- 5 conventional
 - 0 linked issues
 
 
-- 4 day(s) since last release
+- 92 day(s) since last release
 
 ## 2.0.0 - 2025-11-03
 
