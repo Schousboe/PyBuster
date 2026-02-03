@@ -19,11 +19,15 @@ All notable changes to this project will be documented in this file.
 - Add colour with colorama to [MISS] and [FOUND]
 
 
+### Styling
+- Add colour with colorama to [MISS] and [FOUND]
+
+
 
 ### Commit Statistics
-- 5 commits
+- 6 commits
 - 90 day(s) span
-- 5 conventional
+- 6 conventional
 - 0 linked issues
 
 
