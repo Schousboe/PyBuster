@@ -15,9 +15,6 @@ All notable changes to this project will be documented in this file.
 - Correct spelling mistake in 'labels' section in dependabot.yml
 
 
-### Other (unconventional)
-- Add colour with colorama to [MISS] and [FOUND]
-
 
 ### Styling
 - Add colour with colorama to [MISS] and [FOUND]
