@@ -1,8 +1,2 @@
 requests
-argparse
-json
-csv
 colorama
-subprocess
-pathlib
-typing
