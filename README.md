@@ -9,13 +9,11 @@
   
   <p><b>Fast, lightweight and secure directory brute-forcer written in Python</b></p>
 
-   ![PyBuster-stats](https://github-readme-stats.vercel.app/api/pin/?username=Schousboe&repo=PyBuster&theme=dark&icon_color=00FF88")
-
-  <img src="https://img.shields.io/badge/version-2.0.0-blue.svg" alt="version">
+  [![Latest tag](https://badgen.net/github/tag/Schousboe/PyBuster)](https://github.com/Schousboe/PyBuster/tags/)
+  [![GitHub latest commit](https://badgen.net/github/last-commit/Schousboe/pybuster)](https://GitHub.com/Naereen/StrapDown.js/commit/)
   <img src="https://img.shields.io/github/license/Schousboe/PyBuster?color=blue" alt="license">
   <img src="https://img.shields.io/github/issues/Schousboe/PyBuster?color=green" alt="issues">
 
-  <br/>
 
   <p align="center">
     <a href="#features">Features</a> 
