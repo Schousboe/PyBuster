@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 ### Documentation
 - Add PyBuster logo and reference it in README
 - Make logo smaller and update version number in badge
+- Added and deleted badges
 
 
 ### Miscellaneous Tasks
@@ -30,13 +31,13 @@ All notable changes to this project will be documented in this file.
 
 
 ### Commit Statistics
-- 8 commits
-- 91 day(s) span
-- 8 conventional
+- 9 commits
+- 95 day(s) span
+- 9 conventional
 - 0 linked issues
 
 
-- 93 day(s) since last release
+- 97 day(s) since last release
 
 ## 2.0.0 - 2025-11-03
 
